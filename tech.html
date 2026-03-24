@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="bg">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Технологии</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+
+<style>
+body{font-family:'Poppins',sans-serif;margin:0;background:#f8fafc;}
+nav{display:flex;justify-content:space-between;padding:15px 30px;background:#0f172a;color:white;}
+.menu{display:flex;gap:20px;}
+.menu a{color:white;text-decoration:none;}
+
+.hero{background:url("banner.jpg") center/cover no-repeat;height:400px;}
+.hero-text{padding:60px 20px;text-align:center;background:#f8fafc;}
+.hero-text h1{font-size:36px;margin-bottom:15px;color:#0f172a;}
+.hero-text p{font-size:18px;color:#1e293b;max-width:700px;margin:auto;}
+
+.container{width:90%;max-width:1100px;margin:40px auto;}
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+/* FLIP CARD за технологии */
+.flip-card{
+  background:none;
+  perspective:1000px;
+}
+
+.flip-inner{
+  position:relative;
+  width:100%;
+  height:380px; /* увеличихме височината на картата */
+  text-align:center;
+  transition:transform 0.6s;
+  transform-style:preserve-3d;
+  border-radius:12px;
+}
+
+.flip-card:hover .flip-inner{
+  transform:rotateY(180deg);
+}
+
+.flip-front, .flip-back{
+  position:absolute;
+  width:100%;
+  height:100%;
+  backface-visibility:hidden;
+  border-radius:12px;
+  box-shadow:0 5px 15px rgba(0,0,0,0.1);
+  display:flex;
+  flex-direction:column;
+  justify-content:center;
+  align-items:center;
+  padding:15px;
+}
+
+.flip-front{
+  background:white;
+  transition:0.3s;
+}
+
+.flip-front img{
+  width:100%;
+  height:240px; /* увеличихме височината на изображението */
+  object-fit:cover;
+  border-top-left-radius:12px;
+  border-top-right-radius:12px;
+  margin-bottom:15px;
+}
+
+.flip-front h3{
+  margin:0;
+}
+
+.flip-back{
+  background:#3b82f6;
+  color:white;
+  transform:rotateY(180deg);
+  text-align:center;
+  font-size:16px;
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+<div>FutureJobs</div>
+<div class="menu">
+<a href="index.html">Начало</a>
+<a href="professions.html">Професии</a>
+<a href="tech.html">Технологии</a>
+<a href="contact.html">Контакти</a>
+</div>
+</nav>
+
+<section class="hero"></section>
+
+<section class="hero-text">
+<div class="container">
+<h1>Технологии на бъдещето</h1>
+<p>Открий ключовите технологии, които ще променят индустрии и ежедневието ни. Разгледай иновациите и виж какво ще бъде важно утре.</p>
+</div>
+</section>
+
+<div class="container">
+<div class="grid">
+
+<!-- Изкуствен интелект -->
+<div class="flip-card">
+  <div class="flip-inner">
+    <div class="flip-front">
+      <img src="brain.jpg" alt="Изкуствен интелект">
+      <h3>Изкуствен интелект</h3>
+    </div>
+    <div class="flip-back">
+      <p>AI автоматизира рутинни задачи, подпомага вземането на решения и анализира огромни обеми данни. Използва се в здравеопазване, финанси и транспорт.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Квантови компютри -->
+<div class="flip-card">
+  <div class="flip-inner">
+    <div class="flip-front">
+      <img src="cubit.jpg" alt="Квантови компютри">
+      <h3>Квантови компютри</h3>
+    </div>
+    <div class="flip-back">
+      <p>Квантовите компютри решават изключително сложни задачи, ускоряват научни изследвания и променят индустрията със своята изчислителна мощ.</p>
+    </div>
+  </div>
+</div>
+
+<!-- Роботика -->
+<div class="flip-card">
+  <div class="flip-inner">
+    <div class="flip-front">
+      <img src="robot.jpg" alt="Роботика">
+      <h3>Роботика</h3>
+    </div>
+    <div class="flip-back">
+      <p>Роботите ще работят в индустрията и дома, подпомагайки хората и подобрявайки безопасността, ефективността и качеството на живота.</p>
+    </div>
+  </div>
+</div>
+
+
+</div>
+</div>
+
+</body>
+</html>
